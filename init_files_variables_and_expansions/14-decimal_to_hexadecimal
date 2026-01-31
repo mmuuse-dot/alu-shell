@@ -1,0 +1,2 @@
+#!/bin/bash
+grintf '%x\n' $DECIMAL
