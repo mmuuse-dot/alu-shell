@@ -1,6 +1,6 @@
-#!/bin/bash
-# 1-list_your_processes
-# Display all processes for all users in a user-oriented format with hierarchy
+#!/usr/bin/env bash
+# This script displays a list of all currently running processes, for all users, in a user-oriented format with hierarchy
 
-ps -e -f --forest
+ps -ef --forest
+
 
