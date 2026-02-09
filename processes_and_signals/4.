@@ -1,0 +1,22 @@
+
+ry
+Write a Bash script that displays To infinity and beyond indefinitely.
+
+Requirements:
+
+In between each iteration of the loop, add a sleep 2
+sylvain@ubuntu$ ./4-to_infinity_and_beyond
+To infinity and beyond
+To infinity and beyond
+To infinity and beyond
+To infinity and beyond
+To infinity and beyond
+^C
+sylvain@ubuntu$ 
+Note that I ctrl+c (killed) the Bash script in the example.
+
+Repo:
+
+GitHub repository: alu-shell
+Directory: processes_and_signals
+File: 4-to_infinity_and_beyond
