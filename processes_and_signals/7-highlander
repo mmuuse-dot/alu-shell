@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-# Catch SIGTERM
 trap 'echo "I am invincible!!!"' SIGTERM
 
 while true
