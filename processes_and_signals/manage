@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#this is the daemon
+while true
+do
+    echo "I am alive!" >> /tmp/my_process
+    sleep 2
+done
+right
