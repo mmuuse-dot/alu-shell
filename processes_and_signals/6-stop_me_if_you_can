@@ -1,24 +1,3 @@
-#!/usr/bin/env bash
-# This script stops the 4-to_infinity_and_beyond process without using kill
-
-# Loop over all processes
-for pid in /proc/[0-9]*; do
-    if [[ -r "$pid/comm" ]]; then
-        name=$(<"$pid/comm")
-        if [[ "$name" == "bash" ]]; then
-            # Check the command line for our script
-            if [[ -r "$pid/cmdline" ]]; then
-                cmd=$(<"$pid/cmdline")
-                if [[ "$cmd" == *4-to_infinity_and_beyond* ]]; then
-                    # Write SIGTERM to /proc/[pid]/fd/1 to stop it
-                    # Or use process termination via /proc (Linux only)
-                    echo "Terminating $pid ($cmd)"
-                    # Using process group kill via trap
-                    # Send SIGTERM using a shell builtin
-                    exec 3> /proc/"$pid"/fd/0 2>/dev/null && exec 3>&-
-                fi
-            fi
-        fi
-    fi
-done
+#!/bin/bash
+pkill -f 4-to_infinity_and_beyond
 
