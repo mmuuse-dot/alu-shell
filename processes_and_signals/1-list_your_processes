@@ -1,3 +1,6 @@
 #!/usr/bin/env bash
-ps auxf
+# This script displays a list of all currently running processes, for all users, in a user-oriented format with hierarchy
+
+ps -ef --forest
+
 
