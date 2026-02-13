@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-# This script displays a list of all currently running processes, for all users, in a user-oriented format with hierarchy
-
-ps -ef --forest
-
+#This is a scxript that show all processes for all users
+ps auxf
 
